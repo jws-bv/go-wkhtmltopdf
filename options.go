@@ -351,7 +351,7 @@ func newPageOptions() pageOptions {
 		DisableInternalLinks:      boolOption{option: "disable-internal-links"},
 		DisableJavascript:         boolOption{option: "disable-javascript"},
 		DisableLocalFileAccess:    boolOption{option: "disable-local-file-access"},
-		DisableSmartShrinking:     boolOption{option: "disable-smart-shrinking"},
+		DisableSmartShrinking:     boolOption{option: "disable-smart-shrinking", value: true},
 		EnableForms:               boolOption{option: "enable-forms"},
 		EnablePlugins:             boolOption{option: "enable-plugins"},
 		EnableTocBackLinks:        boolOption{option: "enable-toc-back-links"},
