@@ -289,7 +289,7 @@ func (pdfg *PDFGenerator) Create() error {
 func (pdfg *PDFGenerator) run() error {
 	// create command
 	cmd := exec.Command(pdfg.binPath, pdfg.Args()...)
-        fmt.Println(strings.Join(pdfg.Args()))
+        fmt.Println(pdfg.ArgString())
 
 	// set stderr to the provided writer, or create a new buffer
 	var errBuf *bytes.Buffer
