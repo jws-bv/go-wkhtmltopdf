@@ -310,7 +310,7 @@ func newGlobalOptions() globalOptions {
 		ManPage:           boolOption{option: "manpage"},
 		MarginBottom:      uintOption{option: "margin-bottom"},
 		MarginLeft:        uintOption{option: "margin-left", value: 0},
-		MarginRight:       uintOption{option: "margin-right", value: 0},
+		MarginRight:       uintOption{option: "margin-right", value: 0, isset: true},
 		MarginTop:         uintOption{option: "margin-top"},
 		NoCollate:         boolOption{option: "nocollate"},
 		NoPdfCompression:  boolOption{option: "no-pdf-compression"},
