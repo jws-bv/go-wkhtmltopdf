@@ -316,7 +316,7 @@ func newGlobalOptions() globalOptions {
 		NoPdfCompression:  boolOption{option: "no-pdf-compression"},
 		Orientation:       stringOption{option: "orientation"},
 		PageHeight:        uintOption{option: "page-height"},
-		PageSize:          stringOption{option: "page-size", value: "letter"},
+		PageSize:          stringOption{option: "page-size", value: "Letter"},
 		PageWidth:         uintOption{option: "page-width"},
 		Quiet:             boolOption{option: "quiet"},
 		ReadArgsFromStdin: boolOption{option: "read-args-from-stdin"},
