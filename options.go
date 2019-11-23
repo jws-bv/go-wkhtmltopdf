@@ -8,7 +8,7 @@ import (
 const opt = "--"
 
 //A list of options that can be set from code to make it easier to see which options are available
-type globalOptions struct {
+type GlobalOptions struct {
 	CookieJar         stringOption // Read and write cookies from and to the supplied cookie jar file
 	Copies            uintOption   // Number of copies to print into the pdf file (default 1)
 	Dpi               uintOption   // Change the dpi explicitly (this has no effect on X11 based systems)
@@ -38,7 +38,7 @@ type globalOptions struct {
 	Version           boolOption   // Output version information and exit
 }
 
-func (gopt *globalOptions) Args() []string {
+func (gopt *GlobalOptions) Args() []string {
 	return optsToArgs(gopt)
 }
 
@@ -294,8 +294,8 @@ func (bo *boolOption) Unset() {
 	bo.value = false
 }
 
-func newGlobalOptions() globalOptions {
-	return globalOptions{
+func newGlobalOptions() GlobalOptions {
+	return GlobalOptions{
 		CookieJar:         stringOption{option: "cookie-jar"},
 		Copies:            uintOption{option: "copies"},
 		Dpi:               uintOption{option: "dpi"},

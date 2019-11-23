@@ -10,7 +10,7 @@ import (
 )
 
 type jsonPDFGenerator struct {
-	GlobalOptions  globalOptions
+	GlobalOptions  GlobalOptions
 	OutlineOptions outlineOptions
 	Cover          cover
 	TOC            toc
@@ -30,7 +30,7 @@ func (pdfg *PDFGenerator) ToJSON() ([]byte, error) {
 	jpdf := &jsonPDFGenerator{
 		TOC:            pdfg.TOC,
 		Cover:          pdfg.Cover,
-		GlobalOptions:  pdfg.globalOptions,
+		GlobalOptions:  pdfg.GlobalOptions,
 		OutlineOptions: pdfg.outlineOptions,
 	}
 
@@ -74,7 +74,7 @@ func NewPDFGeneratorFromJSON(jsonReader io.Reader) (*PDFGenerator, error) {
 
 	pdfg.TOC = jp.TOC
 	pdfg.Cover = jp.Cover
-	pdfg.globalOptions = jp.GlobalOptions
+	pdfg.GlobalOptions = jp.GlobalOptions
 	pdfg.outlineOptions = jp.OutlineOptions
 
 	for i, p := range jp.Pages {
